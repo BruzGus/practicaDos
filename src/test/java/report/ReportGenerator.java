@@ -27,12 +27,6 @@ public class ReportGenerator {
 
         ReportBuilder reportBuilder = new ReportBuilder(jsonFiles,configuration);
         reportBuilder.generateReports();
-
-
-
-
-
-
     }
 
 }
