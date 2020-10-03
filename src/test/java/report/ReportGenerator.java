@@ -12,7 +12,7 @@ import java.util.List;
 public class ReportGenerator {
 
     public static void main(String[] args) {
-        String path = "";
+        String path = "C:\\Users\\augus\\IdeaProjects\\modulo4\\restapi_java\\build\\cucumber\\";
         File reportOutPut = new File(path+"reportTaskTwo");
 
         List<String> jsonFiles = new ArrayList<>();
