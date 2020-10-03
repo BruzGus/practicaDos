@@ -1,6 +1,6 @@
 package clientAPI;
 
-public class factoryRequest {
+public class FactoryRequest {
     public static RequestClient make(String type) {
         RequestClient client;
         switch (type) {
@@ -10,7 +10,7 @@ public class factoryRequest {
             case "POST":
                 client = new RequestPOST();
                 break;
-            case  "PUT":
+            case "PUT":
                 client = new RequestPUT();
                 break;
             case "DELETE":

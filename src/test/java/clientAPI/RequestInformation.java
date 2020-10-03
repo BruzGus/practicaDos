@@ -20,7 +20,9 @@ public class RequestInformation {
         this.params = params;
         this.headers = headers;
     }
-
+    public void addHeaders(String attribute,String value){
+        this.headers.add(attribute,value);
+    }
 
     public String getUrl() {
         return url;
