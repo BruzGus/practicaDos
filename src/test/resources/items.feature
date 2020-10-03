@@ -1,5 +1,5 @@
 Feature: Items
-
+  @Bryan
   Scenario: As user I want to create a task To organize my daily activities.
     Given I have to be authenticated in todo.ly
     When I send POST request '/api/items.json' with json

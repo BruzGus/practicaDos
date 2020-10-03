@@ -32,3 +32,22 @@ dependencies {
 
 
 }
+
+configurations {
+    cucumberRuntime {
+        extendsFrom testImplementation
+    }
+}
+//gradle clean cucumber -Psuite=@Bryan
+task cucumber() {
+    dependsOn assemble, compileTestJava
+    doLast {
+        javaexec {
+            main = "cucumber.api.cli.Main"
+            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+
+            //args = ['--plugin','json:build/reports/items/report.json', '-f','pretty','--glue', 'runner', 'src/test/resources', '--tags']+[suite]
+            args = ['--plugin','html:build/reports/items/report.html', '-f','pretty','--glue', 'runner', 'src/test/resources', '--tags']+[suite]
+        }
+    }
+}
